@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">HOW IT WORKS</a>
+                </li>
+            </ul>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <div class="btn-login">LOG IN</div>
+                </li>
+                <li class="nav-item">
+                    <div class="btn-sign-up">SIGN UP</div>
+                </li>
+            </ul>
+            <ul class="nav-list info-login">
+                <li class="nav-item">
+                    <div class="avatar"></div>
+                </li>
+                <li class="nav-item">
+                    <div class="form-account">
+                        <p class="user">Welcom Nguyen Vuong</p>
+                        <p class="your-account">Account and Notifications</p>
+                        <i class="ti-arrow-down"></i>
+                        <i class="ti-bell bell-total"></i>
+                        <div class="number-all-notify notify-all"></div>
+                        <div class="account">
+                            <ul class="account-list">
+                                <li class="account-item">
+                                    <h3>Your Account</h3>
+                                </li>
+                                <li class="account-item notify-notification">
+                                    <a href="#">Notification</a>
+                                    <i class="ti-bell"></i>
+                                    <div class="number-notify"></div>
+                                    <ul class="notification">
+                                        <!-- <li>notify 1</li>
+                                        <li>notify 2</li>
+                                        <li>notify 3</li>
+                                        <li>notify 4</li>
+                                        <li>notify 5</li>
+                                        <li>notify 6</li> -->
+                                    </ul>
+                                </li>
+                                <li class="account-item">
+                                    <a href="account.html">Account</a>
+                                    <i class="ti-user" name="icon"></i>
+                                </li>
+                                <li class="account-item">
+                                    <a href="#">Orders</a>
+                                    <i class="ti-receipt"></i>
+                                </li>
+                                <li class="account-item">
+                                    <a href="#">likeList</a>
+                                    <i class="ti-heart"></i>
+                                </li>
+                                <li class="account-item">
+                                    <a href="#">Your Payment</a>
+                                    <i class="ti-wallet"></i>
+                                </li>
+                                <li class="account-item btn-sign-out">
+                                    <a href="#">Sign Out</a>
+                                    <i class="ti-export"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-header">
+            <p class="font-size-13">INNOVATIVE SOLUTION FOR PURCHASE</p>
+            <h2>Help us find the missing puzzle, get rewarded properly.</h2>
+            <div>
+                <input type="text" placeholder="search...">
+                <i class="ti-search"></i>
+            </div>
+        </div>
+
+        <div class="purchase">
+            <div class="purchase-list">
+                <div class="purchase-item">
+                    <img src="data:image/png;base64,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"
+                        alt="">
+                    <div class="purchase-item-des">
+                        <hr>
+                        <h4>Art Director</h4>
+                        <p class="font-size-13">Hermes International</p>
+                        <p class="font-size-13">
+                            <i class="ti-location-pin font-size-10"></i>
+                            location of item 1
+                        </p>
+                    </div>
+                    <div class="purchase-item-des purchase-item-buy">
+                        <h3>$1,240</h3>
+                        <p class="font-size-13">content of money</p>
+                        <div class="purchase-item-icon-buy">
+                            <i class="ti-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase-item">
+                    <img src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/cocacola-128.png" alt="">
+                    <div class="purchase-item-des">
+                        <hr>
+                        <h4>Art Director</h4>
+                        <p class="font-size-13">The Coca-Cola Company</p>
+                        <p class="font-size-13">
+                            <i class="ti-location-pin font-size-10"></i>
+                            location of item 1
+                        </p>
+                    </div>
+                    <div class="purchase-item-des purchase-item-buy">
+                        <h3>$1,980</h3>
+                        <p class="font-size-13">content of money</p>
+                        <div class="purchase-item-icon-buy">
+                            <i class="ti-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ60OD5MIELH0b_Ned7utKYjGhgibBY6Ge18w&usqp=CAU"
+                        alt="">
+                    <div class="purchase-item-des">
+                        <hr>
+                        <h4>Art Director</h4>
+                        <p class="font-size-13">Dropbox Inc.</p>
+                        <p class="font-size-13">
+                            <i class="ti-location-pin font-size-10"></i>
+                            location of item 1
+                        </p>
+                    </div>
+                    <div class="purchase-item-des purchase-item-buy">
+                        <h3>$3,100</h3>
+                        <p class="font-size-13">content of money</p>
+                        <div class="purchase-item-icon-buy">
+                            <i class="ti-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase-item">
+                    <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/209_Mcdonalds_logo_logos-128.png"
+                        alt="">
+                    <div class="purchase-item-des">
+                        <hr>
+                        <h4>Art Director</h4>
+                        <p class="font-size-13">McDonald's Corporation</p>
+                        <p class="font-size-13">
+                            <i class="ti-location-pin font-size-10"></i>
+                            location of item 1
+                        </p>
+                    </div>
+                    <div class="purchase-item-des purchase-item-buy">
+                        <h3>$2,600</h3>
+                        <p class="font-size-13">content of money</p>
+                        <div class="purchase-item-icon-buy">
+                            <i class="ti-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase-item">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/netflix-282224.png" alt="">
+                    <div class="purchase-item-des">
+                        <hr>
+                        <h4>Art Director</h4>
+                        <p class="font-size-13">NetFlix</p>
+                        <p class="font-size-13">
+                            <i class="ti-location-pin font-size-10"></i>
+                            location of item 1
+                        </p>
+                    </div>
+                    <div class="purchase-item-des purchase-item-buy">
+                        <h3>$2,600</h3>
+                        <p class="font-size-13">content of money</p>
+                        <div class="purchase-item-icon-buy">
+                            <i class="ti-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase-item">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAZlBMVEX////XbyzwybD349fbfD/psIv89fHmpn378erqs5Daejz02cf13MzimGjdhUzYdDP++vjloXboq4TilWTtv6HyzrjfjFb459zvxarmpHnknG7suZn88+767OPgj1vrtpTz077dhk2+L8teAAAG2UlEQVR4nO1a2WKsKBAVd9ygERXF9f9/copN7U5yc+81M/0wngcDNFQdC6gqMJ5348aNGzdu3Lhx48aNGzdu/CxGvFRz/Db1TSkIatHG0zcRiPiGFLbwTQTqBrRnVZQEbyKQMCAgvJx379E/RRUQSCbxHvWeRzEBAvP6rgnwvDVRDJb3EWBLANug/c8I6N2eyqFkha77CNXjgKofJEAXWX/5o5g8L16U0TOebcMqlRMYaLMce4Am7CIDQQXm/poH48ef4LWnqlSOhysWUobwrFa/2JUWJUHTNQKdAM3xmHa5z585TAs8arPxZsVCJiEikbII4bZPHCzymn4wot+W5VxlWdWXT+6FQcjp0KomQGj/uyxVLxUfRCZp3pvmPL9KwPMIcthOrcEAD44CaMYmAJQjr2xHny7cBw4ry4rrBMKdAOJHa9/AHmAoVurUSz8E9gfXjzXGWMCsuqx/auqdANlXVJd4nHpJCNafGSmFqPepANh9mKvyxUXoFbUQj53BTG3zEHhU8Bp1ZF5zvxFYWb8tTa/WdpKqsl7TLxrqTf6wr4OHYRA99J+cp4HoJVIGL4RYU59JPiC3DbGfoavp0eJpATTwJcYcbNw2XeC3FWxJWjRCbCiT5LTV4pyznUDDxNUZSKtwaBe615k2QxWl+TLU7ZpGaJaZ/zyEtdZ5psUYoOaa/pDNTfSodzPStCnndijJHICT9MADc/Qa/XtJDOOVSjonF9QHSxs0U16IfpDOCH4YsVzOQkZz78WYdHnGX4b5wr72KkovwhcIeOOMWU1Y0biAJOTmNVzCugMPOXk5htme6hdfEzP72o0s1mt+aHwE+YbqPJ1dg1/CGqvzeNBViVd40uolA1y5+bnhlF30xO1Y4IfIxeAaJjBHVq6raVhKvcajl4U22v60WvnF9JAt3ZqnDT40tFO+TkVj5l2a8FS/aklsgpLw4XWB/BnitGyaYEpYvCMv1yDm5agreJUU/iRL/IxIVA38MA6Plsf0ez1f6k+SCfKtssmTHTLoy1J2rhoVyedYGngwwZvkwhEhDcNwY0tfhWfUEdvCP8CFfUD9n8C7zqk3LGg/AK5FpGsowizLwl8dVWhgoCJeZ4rTUXRITz1d/Tx8+qQ+fRRhOEkWwaFmDALtIyab6ygz2fxTedIKPSFSA88NoQ2Qgalme7g8RMwfRagBrc2tIGHrLhCAYyA9EUAuK2m/IVDoo5x6EEsgxiqhjLCaJolhUI+VMI4hya6xRmRGTxhnKDNNSWaT9FQPh3TVOxkk0SIEhmx2Nv2xIwCde5ifTudWzktCSu0sCLqc62r2c8C426/a8/yJOJ2eYuqEJbrs1hzk5YstWhFgxXoXf4mAVyJ3FQYEoK/ORGOCWvwrAtBRHsN+l4BHKf1AoN6LICltzTLkCInPCVgRhwW8bl3jXdY3BHYcBOBU6vJNRUAgnZxWwONzAo4HrJ3hg1dQxyoL8kTAoD16ggKmoYa4va8IgOBWK4y8ZwJ20+4StNSsZuLM4jj8KXwgcDoUnzbnvEtQBJTpAlWaviHgrU5GdSRSQKAuDaonAu1D4ZRZnwiEe6ahCUzqghDO6N4LgU2LeLqoKZY6M87CTfyfr4GYnwyjCcCuIEwfRX+5BhymRp3lnfy/WYTD0dEQWJVvU7/+ehHSPUdsjsuD7wikwyBeCeDj4G0I6OnhXxGIB5Mgt6clDWrj3yPQfeKIJNrPnZYAzAoZvyIAvqw3BNAeFZO9/DcE+BF/LIGRGM/wHYH9uFohc4pNU4hAU6rKY6rWURrrIviWJdUoDAGapkAg1T0VAZ6OurEEjaqRqbxDi8itCOWhjYjuIICwFkCZdYp/Ho61iYQNgS4cOw9/EvESjncCKOyXpYeOJLhAwP9bAu3u9rJVj4gjA8VmMUU1uTJ6guo72bJ2wYEqwd5IbaM7Bp9E8GcRes1yGLOWKh+p8DtPDOn0vk97N278JVjbtvVily7b74xmaHXbqWvNVszrMPyYdV1FmUXRg5hIlpI9XpBNsiw0n1LsrWiBZr5s0Y8TUEGII/2OS9U6E5CHijj8TIDpCPPj3241gUaroBn33R20IhDYiGcJ4IvXw18SmKZiI2q6BRlpZpM8MkxBbaOvJTBWkBz+CwR0FFtVcQP7L8TMuz5p2jd2N+Njf3w2+0ECYVGYec3RNgyzNTup894FwuNqHk7gP86gPM6EWQ2oQp1VqDWQWMWnbwO0/fF/odgJdOblCvOZQBGgWzaeCDSqkmT/GgFmZ7+tHAHQ/DgRiLLIj8jVT8Yf8LCXAXFoc0o/Uz7B1BZdDsxqnJKQhPjCDfGNGzdu3Lhx48aNGzdu3Pi/4R89Im3zbWM3NQAAAABJRU5ErkJggg=="
+                        alt="">
+                    <div class="purchase-item-des">
+                        <hr>
+                        <h4>Art Director</h4>
+                        <p class="font-size-13">Hermes International</p>
+                        <p class="font-size-13">
+                            <i class="ti-location-pin font-size-10"></i>
+                            location of item 1
+                        </p>
+                    </div>
+                    <div class="purchase-item-des purchase-item-buy">
+                        <h3>$1,240</h3>
+                        <p class="font-size-13">content of money</p>
+                        <div class="purchase-item-icon-buy">
+                            <i class="ti-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase-item">
+                    <img src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/cocacola-128.png" alt="">
+                    <div class="purchase-item-des">
+                        <hr>
+                        <h4>Art Director</h4>
+                        <p class="font-size-13">The Coca-Cola Company</p>
+                        <p class="font-size-13">
+                            <i class="ti-location-pin font-size-10"></i>
+                            location of item 1
+                        </p>
+                    </div>
+                    <div class="purchase-item-des purchase-item-buy">
+                        <h3>$1,980</h3>
+                        <p class="font-size-13">content of money</p>
+                        <div class="purchase-item-icon-buy">
+                            <i class="ti-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ60OD5MIELH0b_Ned7utKYjGhgibBY6Ge18w&usqp=CAU"
+                        alt="">
+                    <div class="purchase-item-des">
+                        <hr>
+                        <h4>Art Director</h4>
+                        <p class="font-size-13">Dropbox Inc.</p>
+                        <p class="font-size-13">
+                            <i class="ti-location-pin font-size-10"></i>
+                            location of item 1
+                        </p>
+                    </div>
+                    <div class="purchase-item-des purchase-item-buy">
+                        <h3>$3,100</h3>
+                        <p class="font-size-13">content of money</p>
+                        <div class="purchase-item-icon-buy">
+                            <i class="ti-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase-item">
+                    <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/209_Mcdonalds_logo_logos-128.png"
+                        alt="">
+                    <div class="purchase-item-des">
+                        <hr>
+                        <h4>Art Director</h4>
+                        <p class="font-size-13">McDonald's Corporation</p>
+                        <p class="font-size-13">
+                            <i class="ti-location-pin font-size-10"></i>
+                            location of item 1
+                        </p>
+                    </div>
+                    <div class="purchase-item-des purchase-item-buy">
+                        <h3>$2,600</h3>
+                        <p class="font-size-13">content of money</p>
+                        <div class="purchase-item-icon-buy">
+                            <i class="ti-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase-item">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/netflix-282224.png" alt="">
+                    <div class="purchase-item-des">
+                        <hr>
+                        <h4>Art Director</h4>
+                        <p class="font-size-13">NetFlix</p>
+                        <p class="font-size-13">
+                            <i class="ti-location-pin font-size-10"></i>
+                            location of item 1
+                        </p>
+                    </div>
+                    <div class="purchase-item-des purchase-item-buy">
+                        <h3>$2,600</h3>
+                        <p class="font-size-13">content of money</p>
+                        <div class="purchase-item-icon-buy">
+                            <i class="ti-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-scroll-left"><i class="ti-arrow-left"></i></div>
+            <div class="btn-scroll-right"><i class="ti-arrow-right"></i></div>
+        </div>
+        <div class="block-blur"></div>
+        <div class="form sign-up">
+            <div class="fill-list">
+                <div class="fill-list-item form-sign-up">
+                    <p>Create a new account</p>
+                    <div>
+                        <input type="text" name="first-name" required placeholder="Your first name">
+                        <i class="ti-check"></i>
+                    </div>
+                    <div>
+                        <input type="text" name="last-name" required placeholder="Your last name">
+                        <i class="ti-check"></i>
+                    </div>
+                    <div>
+                        <input type="text" name="user" required placeholder="Enter your user">
+                        <i class="ti-user"></i>
+                    </div>
+                    <div>
+                        <input type="password" name="password" required placeholder="Enter your password">
+                        <i class="ti-key"></i>
+                    </div>
+                    <div>
+                        <input type="password" name="check-password" required placeholder="Enter your password again">
+                        <i class="ti-check"></i>
+                    </div>
+                </div>
+
+                <div class="fill-list-item accept">
+                    <div class="btn-sign-up-form">SIGN UP</div>
+                </div>
+                <i class="ti-close"></i>
+            </div>
+        </div>
+        <div class="form login">
+            <div class="fill-list">
+                <div class="fill-list-item form-sign-up">
+                    <p>Login your account</p>
+                    <div>
+                        <input type="text" name="user-login" required placeholder="enter your user">
+                        <i class="ti-user"></i>
+                    </div>
+                    <div>
+                        <input type="password" name="password-login" required placeholder="enter your password">
+                        <i class="ti-key"></i>
+                    </div>
+                </div>
+
+                <div class="fill-list-item accept">
+                    <div class="btn-login-form">LOGIN</div>
+                </div>
+                <i class="ti-close"></i>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/javascript/main.js"></script>
+</body>
+
+</html>

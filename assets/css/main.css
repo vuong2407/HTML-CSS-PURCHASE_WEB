@@ -1,0 +1,507 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.font-size-10 {
+    font-size: 10px;
+}
+
+.font-size-13{
+    font-size: 13px;
+}
+
+hr {
+    opacity: 0.4;
+}
+
+.ti-export {
+    transform: rotate(90deg);
+}
+
+.main {
+    background: url('https://images.unsplash.com/photo-1618556658017-fd9c732d1360?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=959&q=80');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    min-height: 42px;
+    justify-content: space-around;
+}
+
+.nav-list {
+    display: flex;
+    padding-top: 10px;
+}
+
+.nav-list:nth-child(2) {
+    display: block;
+}
+
+.nav-list .avatar {
+    width: 50px;
+    height: 50px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtyRZWwRhzFO8jghwBfNm60al6CoBhwc3Vj-yVIV1yfGk7rkogNO6d-bOsftTOjXmHxxk&usqp=CAU');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.nav-item {
+    padding: 0 18px;
+    display: inline-block;
+    line-height: 57px;
+    border-radius: 20px;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    background-color: rgba(253, 249, 249, 0.856);
+}
+
+.info-login {
+    display: none;
+    position: relative;
+}
+
+.info-login .nav-item {
+    position: relative;
+    padding: 0 8px;
+    color: #d4969b;
+}
+
+.info-login .nav-item:hover {
+    cursor: pointer;
+    background-color: inherit;
+    opacity: 1;
+}
+
+.info-login .nav-item:hover .account{
+    display: block;
+}
+
+.info-login nav-item .form-account{
+    position: relative;
+    
+}
+
+.info-login .nav-item .form-account .bell-total{
+    position: absolute;
+    top: 2px;
+    right: -14px;
+    font-size: 18px;
+}
+
+.info-login .nav-item .form-account .number-all-notify{
+    position: absolute;
+    top: -5px;
+    right: -20px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    background-color: white;
+    color: #d4969b;
+    display: none;
+    border: 1px solid #d4969b;
+    border-radius: 50%;
+    animation: animRotateNotifyForm 0.5s ease 0.5s infinite alternate;
+}
+
+@keyframes animRotateNotifyForm {
+    from{
+        top: -5px
+    }
+    to
+    {
+        top: -9px;
+    }
+}
+
+
+.info-login .nav-item .account .account-list .account-item:first-child{
+    color: #d4969b;
+}
+
+.info-login .nav-item .account .account-list .account-item {
+    padding-left: 40px;
+    padding-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+}
+
+.info-login .nav-item .account .account-list li ul{
+    position: absolute;
+    display: none;
+    /* width: 240px; */
+    /* height: 400px; */
+    top: 0;
+    background-color: white;
+    font-size: 18px;
+    left: 100%;
+}
+
+.info-login .nav-item .account .account-list li ul li{
+    width: 240px;
+    padding: 10px;
+}
+
+.info-login .nav-item .account .account-list li ul li:hover {
+    background-color: rgb(206, 200, 200);
+}
+
+.info-login .nav-item .account .account-list li:hover ul{
+    display: block;
+    background-color: rgb(248, 248, 248);
+    animation: anim-opacity 0.5s ease;
+}
+
+.info-login .nav-item .account .account-list .account-item i{
+    position: absolute;
+    color: black;
+    font-size: 18px;
+    left: 10px;
+    top: 11px;
+}
+
+.info-login .nav-item .account .number-notify {
+    position: absolute;
+    background-color: white;
+    color: #d4969b;
+    display: block;
+    border: 1px solid #d4969b;
+    text-align: center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    left: 16px;
+    top: 4px;
+    animation: animRotateNotify 0.5s ease 0.5s infinite alternate;
+}
+
+@keyframes animRotateNotify {
+    from{
+        top: 4px
+    }
+    to
+    {
+        top: 0px;
+    }
+}
+
+.info-login .nav-item p:first-child{
+    line-height: 20px;
+}
+
+.info-login .nav-item p:last-child{
+    line-height: 46px;
+}
+
+.info-login .nav-item .ti-arrow-down{
+    position: absolute;
+    right: 0;
+    top: 40px;
+    left: 195px;
+}
+
+.info-login .nav-item .account {
+    width: 200px;
+    height: 230px;
+    background-color: white;
+    display: none;
+    position:  absolute;
+    animation: anim-opacity 0.8s ease;
+}
+
+@keyframes anim-opacity {
+    from{
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+
+.info-login .nav-item .account .account-list li:hover a,
+.info-login .nav-item .account .account-list li:hover i{
+    color: #d4969b !important;
+}
+
+.sub-header {
+    margin-top: 100px;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.sub-header>p {
+    margin-bottom: 20px;
+}
+
+.sub-header>div {
+    position: relative;
+}
+
+.sub-header>div>input {
+    margin-top: 40px;
+    border-radius: 25px;
+    box-shadow: 0 0 5pt 2pt #D3D3D3;
+    outline-width: 0px;
+    border-width: 0;
+    text-indent: 25px;
+    outline: none;
+    height: 50px;
+    width: 100%;
+}
+
+.ti-search {
+    position: absolute;
+    text-align: center;
+    color: royalblue;
+    bottom: 16px;
+    right: 20px;
+}
+
+.ti-search:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.purchase {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
+    position: relative;
+}
+
+.purchase-list {
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+    overflow-x: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+.btn-scroll-left {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    top: 150px;
+    left: 10px;
+    transition: transform 0.5s ease;
+}
+
+.btn-scroll-right {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    top: 150px;
+    right: 6px;
+    transition: transform 0.5s ease;
+}
+
+.btn-scroll-left:hover,
+.btn-scroll-right:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.purchase-item img {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.purchase-item {
+    height: 300px;
+    width: 15%;
+    min-width:15%;
+    margin: 20px 5px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.purchase-item:hover {
+    /* cursor: pointer; */
+    transform:    scale(1.15);
+}
+
+.purchase-item-des {
+    padding: 0px 20px 20px;
+}
+
+.purchase-item-des h4 {
+    padding: 30px 0 15px;
+}
+
+.purchase-item-des h3 {
+    padding-top: 20px;
+    background: -webkit-linear-gradient(0,#ee9b00, #772804);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.purchase-item-des .purchase-item-icon-buy {
+    position: absolute;
+    right: 20px;
+    bottom: 17px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid rgb(163, 161, 161);
+    color: #e85d04;
+}
+
+.purchase-item .purchase-item-buy {
+    background-color: #fdf7f6;
+    border-radius: 0 0 5px 5px;
+}
+
+.purchase-item .purchase-item-buy:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.purchase-item .purchase-item-buy:hover div{
+    color: white;
+    background-color: #e85d04;
+}
+
+.block-blur{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    top: 0;
+    display: none;
+}
+
+.form {
+    width: 20%;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    right: 40%;
+    left: 40%;
+}
+
+.sign-up{
+    display: none;
+}
+
+.login{
+    display: none;
+}
+
+.form .ti-close{
+    position: absolute;
+    right: 10px;
+    top: 10px
+}
+
+.form .ti-close:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.form .fill-list {
+    height: 100%;
+}
+
+.form .fill-list .fill-list-item{
+    margin-left: 8%;
+    margin-right: 8%;
+    width: 80%;
+}   
+
+.form .fill-list .form-sign-up input{
+    width: 100%;
+    height: 25px;
+    text-indent: 3%;
+    outline: none;
+}
+
+.form .fill-list .form-sign-up {
+    margin-top: 10%;
+}
+
+.form .fill-list .form-sign-up > div {
+    position: relative;
+}
+
+.form .fill-list .form-sign-up > div > i {
+    position: absolute;
+    right: 10px;
+    top: 4px;
+}
+
+.form .fill-list .fill-list-item > *{
+    margin-top: 20px;
+}
+
+.form .fill-list .accept{
+    margin-top: 20%;
+}
+
+.form .fill-list .accept .btn-login-form,
+.form .fill-list .accept .btn-sign-up-form{
+    width: 100%;
+    height: 30px;
+    background-color: #f7aa34;
+    color: white;
+    text-align: center;
+    line-height: 29px;
+    border-radius: 3px;
+}
+
+.form .fill-list .accept .btn-login-form:hover,
+.form .fill-list .accept .btn-sign-up-form:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.login .fill-list .accept {
+    margin-top: 60%;
+}
+
